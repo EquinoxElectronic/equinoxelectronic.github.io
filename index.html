@@ -1,12 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Equinox Electronic</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0e0e0e;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-image: url("images/background.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .overlay-logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 100%; /* more visible now */
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        header *:not(.overlay-logo) {
+            position: relative;
+            z-index: 2;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+        }
+
+        header * {
+            position: relative;
+            z-index: 2;
+        }
+
+        header img {
+            width: 128px;
+            height: 128px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        main {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .project {
+            flex: 1 1 250px;
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+
+        .project h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: #888;
+        }
+
+        a {
+            color: #4ad9ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        Creating dreams, EQUINOX ELECTRONIC.
-    </h1>
+
+<header>
+    <img class="overlay-logo" src="images/EquinoxSlant.png" alt="Equinox Overlay" />
+</header>
+
+<main>
+    <section>
+        <h2>About Us</h2>
+        <p>
+           Equinox Electronic is a solo development studio led by AnotherCastaway that specializes in Java software, primarily in JavaFX, Spring Boot, and MC Forge.
+        </p>
+    </section>
+
+    <section>
+        <h2>Featured Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Ganymede</h3>
+                <p>An unfinished game library for Equinox games.</p>
+            </div>
+            <div class="project">
+                <h3>Lyra 2</h3>
+                <p>An upcoming, super light and easy Machine Learning library for Java.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Equinox Electronic. All rights reserved. //Thanks for visiting!
+</footer>
+
 </body>
 </html>
